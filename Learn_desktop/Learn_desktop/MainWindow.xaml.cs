@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Learn_desktop.Model.DBAccess;
 
 namespace Learn_desktop
 {
@@ -23,6 +24,8 @@ namespace Learn_desktop
         public MainWindow()
         {
             InitializeComponent();
+            ApplicationContext context = new ApplicationContext();
+            var clients = context.Client.ToList();
         }
     }
 }

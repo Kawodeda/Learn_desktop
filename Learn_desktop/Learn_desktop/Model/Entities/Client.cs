@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,8 +19,11 @@ namespace Learn_desktop.Model.Entities
         public string Phone { get; set; }
         public string GenderCode { get; set; }
         public byte[]? Photo { get; set; }
+        [NotMapped]
         public Gender Gender { get; set; }
+        [NotMapped]
         public ICollection<ClientService> ClientService { get; set; }
+        [NotMapped]
         public ICollection<TagOfClient> TagOfClient { get; set; }
     }
 }
